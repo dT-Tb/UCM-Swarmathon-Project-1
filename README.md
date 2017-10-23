@@ -47,3 +47,9 @@ Using the informatin acquired through thosen topics, you will do some computatio
 out to: `turtle1/cmd_vel` and `/state`
 
 The following message types will be required: `turtlesim/Pose`, `geoetry_msgs/Twist`, and `std_msgs/Float64`
+
+When you are done writing the code, you can test your nodes individually and then when your project is complete, it should be run with the launch file provided. 
+
+`roslaunch turtle_pid turtlesim_pid.launch`
+
+![turtle_pid](https://github.com/ManuelMeraz/UCM-Swarmathon-Project-1/blob/master/turtle_pid.png?raw=true)
