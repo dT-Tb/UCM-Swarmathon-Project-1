@@ -11,7 +11,7 @@ Do not copy and paste the commands into your terminal. As you type in the comman
     mkdir -p ~/project1/src/ 
     cd ~/project1/src/
     catkin_init_workspace
-    cd ~/project1/src/
+    cd ~/project1/
     echo "source ~/project1/devel/setup.bash" >> ~/.bashrc
     catkin build
     
@@ -21,8 +21,11 @@ If your workspace compiled then you're ready for the next step! If not, let me k
 
     cd ~/project1/src/
     git clone https://github.com/ManuelMeraz/UCM-Swarmathon-Project-1 turtle_pid
-    cd ~/project1/src/
+    cd ~/project1/
     catkin build
+    source ~/.bashrc
+    
+The skeleton code should compile, but the nodes will not work! Your job is to implement them. 
     
 ## Project Specifications
 
