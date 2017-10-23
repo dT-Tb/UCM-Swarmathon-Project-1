@@ -26,5 +26,24 @@ If your workspace compiled then you're ready for the next step! If not, let me k
     
 ## Project Specifications
 
+We are going to spin the turtle around in a circle, as such we will not worry about the `x` and `y` position of the turtle. We will be looking at the turtle's [`yaw`](https://en.wikipedia.org/wiki/Yaw_(rotation)). 
 
-    
+You will need to implement the following nodes: `setpoint_node` and `transformer`.
+
+There will be 4 setpoints: `[0, pi/2, pi, 3pi/2]` 
+
+I don't care about the particular angle values, because in the end, mathematically speaking `0 == 2pi`. So if you want to use
+the setpoints: `[0, pi/2, -pi,2, pi]`, it doesn't matter. The main goal is to see the turtle spin around and controlled by the PID controller package. 
+
+In the file `setpoint_node.cpp` you will have this node publish out the setpoints to the topic `/setpoint` at a set interval using a timer, which wil be provided for you. It's up to you how this happens.
+
+To accomplish this you will need to use the following message types: `std_msgs/Float64` 
+
+For the second node, in the file `transformer.cpp` you will transform the information coming out of the PID controller nodes to twist commands. 
+
+You will need to subscribe to the following topics: `/control_effort` and `turtle1/pose`
+
+Using the informatin acquired through thosen topics, you will do some computation and publish the information
+out to: `turtle1/cmd_vel` and `/state`
+
+The following message types will be required: `turtlesim/Pose`, `geoetry_msgs/Twist`, and `std_msgs/Float64`
