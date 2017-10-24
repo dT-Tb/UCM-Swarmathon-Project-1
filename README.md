@@ -46,7 +46,7 @@ For the second node, in the file `transformer.cpp` you will transform the inform
 
 You will need to subscribe to the following topics: `/control_effort` and `turtle1/pose`
 
-Using the informatin acquired through thosen topics, you will do some computation and publish the information
+Using the information acquired through the topics, you will do some computation and publish the information
 out to: `turtle1/cmd_vel` and `/state`
 
 The following message types will be required: `turtlesim/Pose`, `geoetry_msgs/Twist`, and `std_msgs/Float64`
